@@ -47,7 +47,9 @@ console.log(lastIndex);
 const anotherLastIndex = people[people.length - 1];
 console.log(anotherLastIndex);
 
+
 // Array.slice();
+// ['Agif', 'Ihsan', 'Ghaniyo', 'Nisa', 'Adi']
 // If only 1 parameter it will start from the first index
 const slicedFromStart = people.slice(1); // [ 'Ihsan', 'Ghaniyo', 'Nisa', 'Adi', 'Abi' ]
 console.log(slicedFromStart);
