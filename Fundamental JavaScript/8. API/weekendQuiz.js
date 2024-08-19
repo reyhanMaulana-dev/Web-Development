@@ -118,9 +118,11 @@ fetch(url)
     - Using other API than the pokemon we used is much better.
 */
 
-async function getAOTSynopsis(season = 1) {
+
+async function getAnimeInfo(title, season = 1) {
     try{
-        const link = `https://api.jikan.moe/v4/anime?q=attack%20on%20titan&sfw`;
+        const titleForLInk = title.replace(/ /g, `%20`)
+        const link = `https://api.jikan.moe/v4/anime?q=${titleForLInk}&sfw`;
         const response = await fetch(link);
 
         if(!response.ok){
@@ -128,7 +130,16 @@ async function getAOTSynopsis(season = 1) {
         }
         
         const anime = await response.json();
+        
+        const animeTitle = anime[`data`][season-1][`title`];
+        const animeGenre = anime[`data`][season - 1][`genres`][0][`name`];
+        const animeEpisode = anime[`data`][season -1][`episodes`];
         const animeSynposis = anime[`data`][season-1][`synopsis`];
+        
+
+        console.log(`Title : ${animeTitle}`);
+        console.log(`Episode : ${animeEpisode}`);
+        console.log(`Genre : ${animeGenre}`);
         console.log(`Synopsis :`);
         console.log(animeSynposis);
         
@@ -137,4 +148,4 @@ async function getAOTSynopsis(season = 1) {
     }
 }
 
-getAOTSynopsis(1)
+getAnimeInfo(`attack on titan`, 1)
