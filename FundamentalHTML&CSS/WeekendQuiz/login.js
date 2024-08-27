@@ -20,5 +20,5 @@ loginForm.addEventListener(`submit`, (e) => {
   }
 
   localStorage.setItem(`email`, getUser.email);
-  window.location.href = `dashboard.html`;
+  window.location.replace(`dashboard.html`);
 });

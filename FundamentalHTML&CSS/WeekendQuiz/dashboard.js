@@ -35,5 +35,5 @@ const logout = document.querySelector(`#logout-button`);
 
 logout.addEventListener(`click`, () =>{
   localStorage.clear();
-  window.location.href = `login.html`;
+  window.location.replace(`login.html`);
 })
