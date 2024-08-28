@@ -20,5 +20,5 @@ loginForm.addEventListener(`submit`, (e)=>{
     }
     
     localStorage.setItem(`email`,account.email);
-    window.location.replace(`../ecommerce/index.html`);
+    window.location.replace(`../ecommerce/dashboard.html`);
 })
