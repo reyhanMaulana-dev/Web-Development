@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Youtube</title>
+</head>
+
+<body>
+    <section class="bg-black min-w-screen min-h-screen text-white">
+        <div id="navbar" class="h-14 bg-[#212121] flex justify-between items-center px-3.5">
+            <div class="flex justify-center">
+                <button>
+                    <img src="public/Hamburger.png" alt="Menu" />
+                </button>
+                <a href="home-youtube.html">
+                    <img src="public/Logo.png" alt="Youtube Logo" />
+                </a>
+            </div>
+            <form class="flex">
+                <input type="text" name="search-input" placeholder="Search"
+                    class="bg-[#121212] border-solid border-2 border-[#303030] px-2 py-1 w-96" />
+                <button class="bg-[#303030] px-3.5 py-1 h-10">
+                    <img src="public/search.png" alt="search" />
+                </button>
+            </form>
+            <div class="flex items-center gap-4">
+                <p>Alice Wonderland</p>
+                <a href="https://google.com">
+                    <img src="public/Profile-pic.png" alt="profile picture">
+                </a>
+            </div>
+        </div>
+        <div class="flex">
+            <div id="sidebar" class="bg-[#212121] w-1/6 min-h-screen pr-5 pt-3 flex flex-col">
+                <div class="flex items-start bg-[#303030] py-2 px-5 gap-5 h-10">
+                    <a href="#">
+                        <img src="public/Home.png" alt="Home icon">
+                    </a>
+                    <p>Home</p>
+                </div>
+            </div>
+            <div class="w-5/6 min-h-screen">
+                <div id="top-menu" class="bg-[#212121] flex gap-5 py-3 px-5 border-y border-[#303030]">
+                    <button class="bg-white text-black border rounded-full py-1 px-3 font-medium">All</button>
+                    <button
+                        class="bg-[#303030] rounded-full py-1 px-3 border-solid border border-[#AAAAAA] font-medium">Item</button>
+                </div>
+                <div id="content-container" class="flex flex-wrap">
+                    <div id="card" class="p-6 flex flex-col gap-2">
+                        <a href="https://youtube.com">
+                            <div class="flex flex-col gap-3 w-72">
+                                <div class="relative">
+                                    <img src="public/Thumbnail.png" alt="Thumbnail" class="w-full">
+                                    <div class="bg-black px-2 py-1 absolute bottom-1 right-1">
+                                        <p class="text-xs">23:45</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div>
+                                        <img src="public/User-Avatar.png" alt="Tony" class="w-14 rounded-full">
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-xs subpixel-antialiased">Lorem ipsum dolor sit amet, consecte adipiscing elit.</p>
+                                        <div class="mt-2 ont-medium text-xs text-[#AAAAAA] subpixel-antialiased">
+                                            <p class="">James Gouse</p>
+                                            <p class="">15K Views. <span>1 week ago</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
