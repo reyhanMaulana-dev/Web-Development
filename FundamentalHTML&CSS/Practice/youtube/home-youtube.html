@@ -49,30 +49,34 @@
                     <button
                         class="bg-[#303030] rounded-full py-1 px-3 border-solid border border-[#AAAAAA] font-medium">Item</button>
                 </div>
-                <div id="content-container" class="flex flex-wrap">
-                    <div id="card" class="p-6 flex flex-col gap-2">
-                        <a href="https://youtube.com">
-                            <div class="flex flex-col gap-3 w-72">
-                                <div class="relative">
-                                    <img src="public/Thumbnail.png" alt="Thumbnail" class="w-full">
-                                    <div class="bg-black px-2 py-1 absolute bottom-1 right-1">
-                                        <p class="text-xs">23:45</p>
-                                    </div>
+                <div youtube="container" class="flex flex-wrap justify-around">
+                    <div youtube="video" class="pt-5 flex flex-col">
+                        <div class="flex flex-col gap-3 w-72">
+                            <a video="thumbnail-link" href="#" class="relative">
+                                <img video="thumbnail-image" src="public/Thumbnail.png" alt="Thumbnail" class="w-full rounded-xl">
+                                <div class="bg-black px-2 py-1 absolute bottom-1 right-1">
+                                    <p class="text-xs">23:45</p>
                                 </div>
-                                <div class="flex gap-3">
-                                    <div>
-                                        <img src="public/User-Avatar.png" alt="Tony" class="w-14 rounded-full">
-                                    </div>
-                                    <div>
-                                        <p class="font-medium text-xs subpixel-antialiased">Lorem ipsum dolor sit amet, consecte adipiscing elit.</p>
-                                        <div class="mt-2 ont-medium text-xs text-[#AAAAAA] subpixel-antialiased">
-                                            <p class="">James Gouse</p>
-                                            <p class="">15K Views. <span>1 week ago</span></p>
-                                        </div>
+                            </a>
+                            <div class="flex gap-2">
+                                <a class="w-2/12" video="profile-link" href="#">
+                                    <img src="public/User-Avatar.png" alt="Tony" class="w-10">
+                                </a>
+                                <div class="w-10/12">
+                                    <a video="title-link" href="#">
+                                        <p video="title-video" class="font-medium text-sm subpixel-antialiased">Lorem ipsum dolor sit amet,
+                                            consecte adipiscing elit.</p>
+                                    </a>
+                                    <div class="mt-2 ont-medium text-xs text-[#AAAAAA] subpixel-antialiased">
+                                        <a video="profile-title-link" href="#">
+                                            <p video="profile-title">James Gouse</p>
+                                        </a>
+                                        <p>15K Views. <span>1 week ago</span></p>
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
