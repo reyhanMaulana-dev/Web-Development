@@ -35,12 +35,60 @@
             </div>
         </div>
         <div class="flex">
-            <div id="sidebar" class="bg-[#212121] w-1/6 min-h-screen pr-5 pt-3 flex flex-col">
-                <div class="flex items-start bg-[#303030] py-2 px-5 gap-5 h-10">
-                    <a href="#">
+            <div id="sidebar" class="bg-[#212121] w-1/6 min-h-screen pr-5 pt-3 flex flex-col gap-2.5">
+                <div id="sidebar-top">
+                    <a href="#" class="flex items-start bg-[#303030] py-3 px-5 gap-5">
                         <img src="public/Home.png" alt="Home icon">
+                        <p>Home</p>
                     </a>
-                    <p>Home</p>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/explore.png" alt="Home icon">
+                        <p>Explore</p>
+                    </a>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/subscriptions.png" alt="Home icon">
+                        <p>Subscriptions</p>
+                    </a>
+                </div>
+                <hr class="border-[#303030]">
+                <div id="sidebar-top-2">
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/library.png" alt="Lİbrary">
+                        <p>Library</p>
+                    </a>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/history.png" alt="Home icon">
+                        <p>History</p>
+                    </a>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/yourVideos.png" alt="Home icon">
+                        <p>Your Videos</p>
+                    </a>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/watchLater.png" alt="Home icon">
+                        <p>Watch Later</p>
+                    </a>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/liked.png" alt="Home icon">
+                        <p>Liked Videos</p>
+                    </a>
+                    <a href="#" class="flex items-start hover:bg-[#303030] py-3 px-5 gap-5">
+                        <img src="public/arrowBottom.png" alt="Home icon">
+                        <p>Show More</p>
+                    </a>
+                </div>
+                <hr class="border-[#303030]">
+                <div id="subscriptions">
+                    <p class="font-medium text-base flex items-start py-2 px-5 gap-5">SUBSCRIPTIONS</p>
+                    <a href="#" class="flex items-center py-2.5 px-5 gap-5">
+                        <img src="public/User-Avatar.png" alt="Home icon" class="w-7">
+                        <p>James Gouse</p>
+                    </a>
+                    <a href="#" class="flex items-center py-2.5 px-5 gap-5">
+                        <img src="public/User-Avatar.png" alt="Home icon" class="w-7">
+                        <p>James Gouse</p>
+                    </a>
+
                 </div>
             </div>
             <div class="w-5/6 min-h-screen">
@@ -49,8 +97,8 @@
                     <button
                         class="bg-[#303030] rounded-full py-1 px-3 border-solid border border-[#AAAAAA] font-medium">Item</button>
                 </div>
-                <div youtube="container" class="flex flex-wrap justify-around">
-                    <div youtube="video" class="pt-5 flex flex-col">
+                <div youtube="container" class="flex flex-wrap justify-between p-10 py-7">
+                    <div youtube="video" class="flex flex-col py-3">
                         <div class="flex flex-col gap-3 w-72">
                             <a video="thumbnail-link" href="#" class="relative">
                                 <img video="thumbnail-image" src="public/Thumbnail.png" alt="Thumbnail" class="w-full rounded-xl">
