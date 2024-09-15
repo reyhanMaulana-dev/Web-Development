@@ -4,17 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const account = users.find((user) => user.email === localStorage.getItem("email"));
     
     // inilization
-    const accountName = document.querySelector("#account-name");
-    accountName.innerHTML = `${account.firstName} ${account.lastName}`;
+    if(account){
+        const accountName = document.querySelector("#account-name");
+        accountName.innerHTML = `${account.firstName} ${account.lastName}`;
+    }
     
-
     // render cards
     renderCard();
 })
-
-const playlistId = `RDNvNPx8ssvKE&start_radio=1`;
-const max = 50;
-const key = `AIzaSyBoqOwRlq2G3JxrsFg9V6mJR3IQVoJxaNk`;
 
 async function getPlaylist(playlistId, max, key) {
     try {
@@ -29,12 +26,16 @@ async function getPlaylist(playlistId, max, key) {
         return playlist;
         
     } catch (error) {
-        console.log(error);
+        throw error;
     }
 }
 
 async function renderCard() {
     try {
+        const playlistId = `RDNvNPx8ssvKE&start_radio=1`;
+        const max = 50;
+        const key = `AIzaSyBoqOwRlq2G3JxrsFg9V6mJR3IQVoJxaNk`;
+        
         const playlist = await getPlaylist(playlistId, max, key);
         const container = document.querySelector(`[youtube = container ]`);
         const wrapper = container.querySelector(`[youtube = video]`).cloneNode(true);         
