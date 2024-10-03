@@ -4,7 +4,6 @@ import { productController } from "../controllers/products.controller.js";
 
 const router = express.Router();
 
-
 router.get('/', (req, res) =>{
     res.send('hello')
 })
