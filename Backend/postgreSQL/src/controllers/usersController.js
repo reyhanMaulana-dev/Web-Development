@@ -55,6 +55,34 @@ class UserController {
             res.status(500).send('Internal Server Error');
         }
     }
+
+    updateUser = async (req, res) => {
+        try {
+            const { id } = req.params;
+            const body = req.body;
+            const { rows : user } = await pool.query(`SELECT * FROM "Users" WHERE user_id = ${id}`)
+
+            if(!user[0]) throw new Error(`Users not found`)
+
+            let query = `UPDATE "Users" SET `;
+            for (const key in body) {
+                if (Object.prototype.hasOwnProperty.call(body, key)) {
+                    query += `${key} = '${body[key]}', `
+                }    
+            }
+            query = query.slice(0, -2)
+            query += ` WHERE user_id = ${id}`
+            
+            await pool.query(query);
+            res.status(200).send({
+                message : 'User updated',
+                user : req.body
+            });
+        } catch (error) {
+            console.log(error.message);
+            res.status(500).send('Internal Server Error')
+        }
+    }
 }
 
 export const userController = new UserController();
