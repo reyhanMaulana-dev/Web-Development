@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient
 
-class CropsController{
+class CropController{
     addCrop = async (req,res) => {
         try {
             const { name, price, userId } = req.body
@@ -44,4 +44,4 @@ class CropsController{
     }
 }
 
-export const cropsController = new CropsController()
+export const cropController = new CropController()
