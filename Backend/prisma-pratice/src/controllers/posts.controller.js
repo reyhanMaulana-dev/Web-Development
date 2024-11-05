@@ -2,10 +2,10 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 class PostController {
-  addPost = async (req, res) => {
+  addPost = async (req, res, next) => {
     try {
       const { title, content, user_id } = req.body;
-      if (!title || !content || !user_id) throw new Error("Bad Request");
+      // if (!title || !content || !user_id) throw new Error("Bad Request");
 
       const newPost = await prisma.post.create({
         data: { title, content, user_id: Number(user_id) },
@@ -13,22 +13,20 @@ class PostController {
 
       res.status(201).send(newPost);
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Internal Server Error");
+      next(error)
     }
   };
 
-  getPost = async (req, res) => {
+  getPost = async (req, res, next) => {
     try {
       const posts = await prisma.post.findMany();
       res.status(200).send(posts);
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Internal Server Error");
+      next(error)
     }
   };
 
-  findPost = async (req, res) => {
+  findPost = async (req, res, next) => {
     try {
       const { id } = req.params;
       const post = await prisma.post.findUniqueOrThrow({
@@ -41,12 +39,11 @@ class PostController {
 
       res.status(200).send(post);
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Internal Server Error");
+      next(error)
     }
   };
 
-  updatePost = async (req, res) => {
+  updatePost = async (req, res, next) => {
     try {
       const { id } = req.params;
       const { title, content, user_id } = req.body;
@@ -62,12 +59,11 @@ class PostController {
 
       res.status(200).send(updatedPost);
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Internal Server Error");
+      next(error)
     }
   };
 
-  deletePost = async (req, res) => {
+  deletePost = async (req, res, next) => {
     try {
       const { id } = req.params;
       await prisma.post.findUniqueOrThrow({
@@ -80,8 +76,7 @@ class PostController {
 
       res.status(200).send(deletedPost);
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Internal Server Error");
+      next(error)
     }
   };
 }
