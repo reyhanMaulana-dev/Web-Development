@@ -17,11 +17,10 @@ class ProfileController{
         }
     }
 
-    getUsers = async (req, res, next) => {
+    getProfile = async (req, res, next) => {
         try {
             const profiles = await prisma.profile.findMany()
-            if(profiles.length == 0) throw { name: 'NotFoundError', message: 'Users Not Found' }
-
+            
             res.status(200).send(profiles)
         } catch (error) {
             next(error)

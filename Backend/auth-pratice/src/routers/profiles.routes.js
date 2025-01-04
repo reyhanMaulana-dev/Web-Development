@@ -10,6 +10,6 @@ router.put("/:id", authentication, userAuthorization, profileController.updatePr
 
 router.delete("/:id", authentication, userAuthorization, profileController.deleteProfile)
 
-router.get("/", profileController.getUsers)
+router.get("/", profileController.getProfile)
 router.get("/:id", profileController.findProfile)
 export default router
