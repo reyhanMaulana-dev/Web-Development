@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
-        robotoMono: ['"Roboto Mono"', 'monospace'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
