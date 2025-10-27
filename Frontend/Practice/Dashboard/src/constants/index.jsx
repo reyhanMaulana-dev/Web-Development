@@ -5,12 +5,89 @@ import { ShieldHalf } from "lucide-react";
 import { PlugZap } from "lucide-react";
 import { GlobeLock } from "lucide-react";
 
+import {
+  GraduationCap,
+  BookOpen,
+  UserCheck,
+  Users,
+  Server,
+  Shield,
+  FileText,
+  Briefcase,
+  Building2,
+  Compass,
+  Cpu,
+} from "lucide-react";
+
 import user1 from "../assets/profile-pictures/user1.jpg";
 import user2 from "../assets/profile-pictures/user2.jpg";
 import user3 from "../assets/profile-pictures/user3.jpg";
 import user4 from "../assets/profile-pictures/user4.jpg";
 import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
+
+export const surveys = [
+  {
+    icon: <BookOpen />,
+    text: "Survey Administrasi Akademik",
+    description:
+      "Menilai tingkat kepuasan civitas akademika terhadap layanan administrasi akademik di lingkungan universitas.",
+  },
+  {
+    icon: <UserCheck />,
+    text: "Survey Bimbingan Akademik",
+    description:
+      "Mengukur efektivitas layanan bimbingan akademik dalam mendukung mahasiswa mencapai prestasi akademik yang optimal.",
+  },
+  {
+    icon: <Users />,
+    text: "Survey Layanan Informasi Karir dan Industri",
+    description:
+      "Mengevaluasi kualitas layanan informasi karir dan hubungan industri yang diberikan kepada alumni dan mahasiswa.",
+  },
+  {
+    icon: <Server />,
+    text: "Survey Layanan IT Fakultas",
+    description:
+      "Menilai performa dan ketersediaan layanan teknologi informasi di tingkat fakultas dan universitas.",
+  },
+  {
+    icon: <Shield />,
+    text: "Survey Layanan Keamanan & Kesehatan",
+    description:
+      "Mengukur kepuasan terhadap layanan keamanan, kebersihan, dan kesehatan di area kampus.",
+  },
+  {
+    icon: <FileText />,
+    text: "Survey Legalisir Dokumen",
+    description:
+      "Menilai ketepatan, kecepatan, dan kemudahan layanan legalisasi dokumen akademik bagi alumni.",
+  },
+  {
+    icon: <Briefcase />,
+    text: "Survey Profesionalisme ASN",
+    description:
+      "Mengukur tingkat profesionalisme dan kualitas kinerja ASN di lingkungan UIN Syarif Hidayatullah Jakarta.",
+  },
+  {
+    icon: <Building2 />,
+    text: "Survey Sarana dan Prasarana",
+    description:
+      "Menilai kelayakan, kenyamanan, dan ketersediaan sarana prasarana kampus bagi civitas akademika.",
+  },
+  {
+    icon: <GraduationCap />,
+    text: "Tracer Study (Layanan Alumni)",
+    description:
+      "Melacak jejak karir alumni untuk mengetahui relevansi kompetensi lulusan dengan kebutuhan dunia kerja.",
+  },
+  {
+    icon: <Cpu />,
+    text: "Survey Transformasi Digital",
+    description:
+      "Menilai implementasi dan dampak transformasi digital terhadap kegiatan akademik dan layanan universitas.",
+  },
+];
 
 export const navItems = [
   { label: "Features", href: "#" },

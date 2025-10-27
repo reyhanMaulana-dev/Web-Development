@@ -5,6 +5,25 @@
 @tailwind utilities;
 
 :root {
+  /* Font */
   font-family: "Poppins", sans-serif;
+
+  /* Warna dasar */
+  --background: #081028;
+  --text-main: #ffffff;
+  --text-secondary: #b0b3c7;
+
+  /* Warna aksen */
+  --accent1: #8951ff;
+  --accent2: #21c3fc;
+  --accent3: #0e43fb;
+
+  /* Warna tambahan opsional */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.03);
+
+  /* Skema warna */
   color-scheme: dark;
+  background-color: var(--background);
+  color: var(--text-main);
 }
