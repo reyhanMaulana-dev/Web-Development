@@ -10,6 +10,11 @@ import {
   Building2,
   Compass,
   Cpu,
+  Handshake,
+  School,
+  User2,
+  NotebookIcon,
+  NotebookPenIcon,
 } from "lucide-react";
 
 
@@ -22,7 +27,7 @@ export const surveys = [
     link: "https://lookerstudio.google.com/reporting/f030673d-e0a2-4a1c-a365-9dca9afe2b76"
   },
   {
-    icon: <FileText />,
+    icon: <NotebookPenIcon />,
     text: "Survey Bimbingan",
     description:
       "Menilai kepuasan mahasiswa terhadap proses bimbingan skripsi oleh dosen pembimbing, mencakup aspek ketersediaan waktu, kualitas arahan, dan kejelasan komunikasi akademik.",
