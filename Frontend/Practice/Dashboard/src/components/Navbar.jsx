@@ -1,12 +1,10 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo.png";
 
 const navItems = [
   { label: "Beranda", href: "#home" },
   { label: "Dashboard Survei", href: "#dashboards" },
   { label: "Tentang Survei", href: "#about" },
-  { label: "Kontak", href: "#contact" },
 ];
 
 const Navbar = () => {

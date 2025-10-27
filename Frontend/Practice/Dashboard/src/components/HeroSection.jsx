@@ -1,5 +1,3 @@
-import video1 from "../assets/video1.mp4";
-import video2 from "../assets/video2.mp4";
 
 const HeroSection = () => {
   return (
@@ -34,28 +32,6 @@ const HeroSection = () => {
           Tentang Survei
         </a>
       </div>
-
-      {/* Optional: Video preview (aktifkan kalau mau tampilkan preview dashboard) */}
-      {/* <div className="flex mt-10 justify-center">
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-accent3 shadow-sm shadow-accent2/40 mx-2 my-4"
-        >
-          <source src={video1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-accent3 shadow-sm shadow-accent2/40 mx-2 my-4"
-        >
-          <source src={video2} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
     </div>
   );
 };
