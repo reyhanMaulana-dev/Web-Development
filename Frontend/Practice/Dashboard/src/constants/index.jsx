@@ -52,6 +52,7 @@ export const surveys = [
     text: "Survey Layanan IT Fakultas",
     description:
     "Menilai performa dan ketersediaan layanan teknologi informasi di tingkat fakultas dan universitas.",
+    link: "https://lookerstudio.google.com/reporting/1349a714-0d00-47c6-8ee9-b5ec7874ea69"
   },
   {
     icon: <Shield />,
