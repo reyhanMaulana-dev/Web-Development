@@ -28,7 +28,7 @@ export const surveys = [
   },
   {
     icon: <NotebookPenIcon />,
-    text: "Survey Bimbingan",
+    text: "Survey Bimbingan Skripsi",
     description:
       "Menilai kepuasan mahasiswa terhadap proses bimbingan skripsi oleh dosen pembimbing, mencakup aspek ketersediaan waktu, kualitas arahan, dan kejelasan komunikasi akademik.",
     link: "https://lookerstudio.google.com/reporting/8125c058-97ac-4d9d-9799-36df900a7b0d",
