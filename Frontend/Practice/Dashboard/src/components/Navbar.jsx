@@ -1,16 +1,31 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, BarChart3, Info } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Beranda", href: "" },
-  { label: "Dashboard", href: "/survey/0" },
-  { label: "Tentang Survei", href: "#survei" },
+  { label: "Beranda", href: "", icon: <Home className="w-5 h-5" /> },
+  { label: "Dashboard", href: "/survey/0", icon: <BarChart3 className="w-5 h-5" /> },
+  { label: "Tentang Survei", href: "#survei", icon: <Info className="w-5 h-5" /> },
 ];
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const toggleNavbar = () => setMobileDrawerOpen(!mobileDrawerOpen);
+
+  const handleNavClick = (href) => {
+    if (href.startsWith("#")) {
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (href === "") {
+      // Scroll to top for Beranda
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.location.href = href;
+    }
+    setMobileDrawerOpen(false);
+  };
 
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-[#21C3FC]/20 bg-[#081028]/80">
@@ -31,6 +46,10 @@ const Navbar = () => {
               <li key={index}>
                 <a
                   href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
                   className="text-gray-200 hover:text-[#21C3FC] transition-colors duration-300 font-medium"
                 >
                   {item.label}
@@ -50,19 +69,21 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Drawer */}
+        {/* Mobile Drawer (kembali ke overlay kanan seperti asli, tapi dengan icon dan smooth scroll) */}
         {mobileDrawerOpen && (
           <div className="fixed right-0 top-0 z-40 bg-[#081028] w-full h-screen p-12 flex flex-col justify-center items-center lg:hidden">
-            <ul>
+            <ul className="space-y-6">
               {navItems.map((item, index) => (
-                <li key={index} className="py-4 text-lg text-center">
-                  <a
-                    href={item.href}
-                    onClick={() => setMobileDrawerOpen(false)}
-                    className="text-gray-200 hover:text-[#21C3FC] font-medium transition-colors duration-300"
+                <li key={index} className="text-center">
+                  <button
+                    onClick={() => handleNavClick(item.href)}
+                    className="flex items-center justify-center text-gray-200 hover:text-[#21C3FC] font-medium transition-colors duration-300 text-lg"
                   >
+                    <div className="h-8 w-8 p-1 bg-accent1/20 text-accent2 rounded-full flex justify-center items-center mr-3">
+                      {item.icon}
+                    </div>
                     {item.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
