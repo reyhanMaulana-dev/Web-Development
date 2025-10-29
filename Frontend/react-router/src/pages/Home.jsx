@@ -6,7 +6,7 @@ const Home = () => {
 
   useEffect(() =>{
     const fetchAnime = async () => {
-      const response = await fetch("https://api.jikan.moe/v4/anime?page=6&limit=10")
+      const response = await fetch("https://api.jikan.moe/v4/anime?page=2&limit=10")
       const { data }  = await response.json()
       
       const mappedAnime = data.map(item =>({
