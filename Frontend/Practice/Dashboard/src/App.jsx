@@ -1,17 +1,16 @@
-import Navbar from "./components/Navbar.jsx"
-import HeroSection from "./components/HeroSection.jsx"
-import SurveySection from "./components/SurveySection.jsx"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Page/Home.jsx";
+import SurveyPage from "./Page/SurveyPage.jsx";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
-        <HeroSection />
-        <SurveySection />
-      </div>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/survey/:id" element={<SurveyPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

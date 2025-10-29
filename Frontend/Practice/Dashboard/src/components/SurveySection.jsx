@@ -1,14 +1,21 @@
 import { surveys } from "../constants";
+import { useNavigate } from "react-router-dom";
 
 const SurveySection = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (index) => {
+    navigate(`/survey/${index}`);
+  };
+
   return (
     <section
-      id="dashboards"
+      id="survei"
       className="relative mt-20 border-b border-accent3/30 pb-20 min-h-[800px] bg-background text-textmain"
     >
       <div className="text-center">
         <span className="bg-accent3/10 text-accent2 rounded-full h-6 text-sm font-medium px-3 py-1 uppercase tracking-wide">
-          Dashboard
+          Survei
         </span>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
           Jelajahi{" "}
@@ -29,14 +36,10 @@ const SurveySection = () => {
         {surveys.map((survey, index) => (
           <div
             key={index}
-            className="w-full sm:w-1/2 lg:w-1/3 p-4 transition-transform duration-300 hover:scale-[1.02]"
+            onClick={() => handleClick(index)}
+            className="cursor-pointer w-full sm:w-1/2 lg:w-1/3 p-4 transition-transform duration-300 hover:scale-[1.02]"
           >
-            <a
-              href={survey.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block flex flex-col h-full bg-[#0D1730] rounded-xl p-6 border border-accent3/20 hover:border-accent2/50 shadow-md shadow-accent3/10 transition"
-            >
+            <div className="block flex flex-col h-full bg-[#0D1730] rounded-xl p-6 border border-accent3/20 hover:border-accent2/50 shadow-md shadow-accent3/10 transition">
               <div className="flex items-center mb-4">
                 <div className="h-10 w-10 p-2 bg-accent1/20 text-accent2 rounded-full flex justify-center items-center mr-3">
                   {survey.icon}
@@ -51,7 +54,7 @@ const SurveySection = () => {
               <span className="mt-auto inline-block text-accent2 hover:text-accent1 font-medium transition">
                 Lihat Dashboard →
               </span>
-            </a>
+            </div>
           </div>
         ))}
       </div>

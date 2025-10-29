@@ -1,7 +1,10 @@
+import { useParams, useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20 bg-background text-textmain px-6">
+    <div id="home" className="flex flex-col items-center mt-6 lg:mt-20 bg-background text-textmain px-6">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
         Dashboard Survei{" "}
         <span className="bg-gradient-to-r from-accent1 to-accent2 text-transparent bg-clip-text">
@@ -19,15 +22,15 @@ const HeroSection = () => {
       </p>
 
       <div className="flex justify-center my-10">
-        <a
-          href="#"
-          className="bg-gradient-to-r from-accent1 to-accent2 py-3 px-6 mx-3 rounded-md font-medium hover:opacity-90 transition"
+        <div
+          onClick={()=> navigate("/survey/0")}
+          className="cursor-pointer bg-gradient-to-r from-accent1 to-accent2 py-3 px-6 mx-3 rounded-md font-medium hover:opacity-90 transition"
         >
           Lihat Dashboard
-        </a>
+        </div>
         <a
-          href="#"
-          className="py-3 px-6 mx-3 rounded-md border border-accent3 text-accent2 hover:bg-accent3/20 transition"
+          href="#survei"
+          className="cursor-pointer py-3 px-6 mx-3 rounded-md border border-accent3 text-accent2 hover:bg-accent3/20 transition"
         >
           Tentang Survei
         </a>

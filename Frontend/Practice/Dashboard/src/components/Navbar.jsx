@@ -2,9 +2,9 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Beranda", href: "#home" },
-  { label: "Dashboard Survei", href: "#dashboards" },
-  { label: "Tentang Survei", href: "#about" },
+  { label: "Beranda", href: "" },
+  { label: "Dashboard", href: "/survey/0" },
+  { label: "Tentang Survei", href: "#survei" },
 ];
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
             {/* Kalau ingin pakai logo, aktifkan baris di bawah */}
             {/* <img className="h-10 w-10 mr-2" src={logo} alt="Logo" /> */}
             <span className="text-xl font-semibold bg-gradient-to-r from-[#8951FF] to-[#21C3FC] text-transparent bg-clip-text tracking-tight">
-              UIN Syarif Hidayatullah
+              Pusat Mutu Kinerja
             </span>
           </div>
 
